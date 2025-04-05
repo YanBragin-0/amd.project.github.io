@@ -1,9 +1,7 @@
 body {
     font-family: 'Arimo', sans-serif;
-    background-color: #000000;
+    background:linear-gradient(to right, #000000, #140101, #000000);
     color: #ffffff;
-    line-height: 1.6;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,6 +15,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+header a{
+    text-decoration: none;
 }
 .nav-right,.nav-left{
     display: flex;
@@ -54,7 +58,7 @@ main {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    margin: auto;
+
     transition: background-color 0.3s ease;
 }
 
@@ -64,47 +68,46 @@ main {
 }
 .content {
     display: flex;
+    width: 75%;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    text-align: center;
-}
+    margin: 0 auto;
 
-.content_bar {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+ 
 }
-
 .content_bar a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-}
-
-.content_bar a:hover {
-    text-decoration: underline;
+    margin: 30px;
+    padding: auto;
 }
 .footer {
     background-color: #000000;
-    color: white;
+    color:gray;
     padding: 30px 0;
+    height: 280px
 }
 
 .footer-container {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     gap: 30px;
-    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.footer-info {
+    width: 200px;
 }
 
 .footer-info h3 {
-    font-size: 1.2rem;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
 .footer-info ul {
     list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 .footer-info li {
@@ -112,7 +115,7 @@ main {
 }
 
 .footer-info a {
-    color: white;
+    color:gray;
     text-decoration: none;
 }
 
@@ -120,22 +123,22 @@ main {
     text-decoration: underline;
 }
 
-.footer .button {
-    margin-top: 20px;
-}
+
 .block1{
-    background-size:auto;
+    background-size:cover;
     background-position: center;
-    background-image: url(https://t2.tudocdn.net/705039?w=1920);
+    background-image: url(images/block1-bg.webp);
     background-repeat: no-repeat;
     padding-top: 20%;
-    background-size: auto;
-
+    background-size: cover;
+    display: flex;
+    width: 85%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 .block2{
-
-
     margin-top: 20%;
 }
 .block3 h2{
@@ -143,4 +146,116 @@ main {
 }
 .block3{
     margin-top: 20%;
+}
+.block4{
+    background-size:cover;
+    background-position: center;
+    background-image: url(images/block4-bg.avif);
+    background-repeat: no-repeat;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    display: flex;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block4 h1{
+    text-align: center;
+    display: inline-block;
+}
+
+.flex-cont{
+    display: flex;
+    max-width: max-content;
+    max-height: max-content;
+    text-align: center;
+    flex-direction: column;
+    justify-content: left;
+}
+.blockAI {
+    display: flex;
+    max-width: max-content;
+    max-height: max-content;
+    flex-direction: column;
+    margin-left: 20vh;
+    margin-top: 10vh;
+    padding:10px 10px 10px 10px;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+h1{
+    display: flex;
+    width: 70%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+h2{
+    display: flex;
+    max-width: max-content;
+    max-height: max-content;
+    text-align: left;
+    margin-left: 30vh;
+
+}
+.button-fix {
+    position: fixed;
+    left: 1%;
+    bottom: 1%;;
+}
+.button-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 10px auto;
+    gap: 20%;
+    text-decoration: none;
+}
+.grid-cont{
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 150px 150px 150px;
+    padding: 5px;
+    margin-left: 900px;
+    position: absolute;
+    transform: translateX(-50%);
+}
+.el1{
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/images-grid1.jpg);
+    background-repeat: no-repeat;
+}
+.el2{
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/images-grid2.jpg);
+    background-repeat: no-repeat;
+} 
+.el3 {
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/images-grid3.jpg);
+    background-repeat: no-repeat;
+}
+.grid-cont h3{
+    margin:5px;
+}
+.el4,.el5,.el6{
+    text-align: left;
+}
+.grid-cont a{
+    text-decoration: none;
+    color: rgb(3, 152, 211);
+}
+.grid-cont h4{
+    margin-left:0;
 }
