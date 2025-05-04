@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -9,17 +10,26 @@
     <title>Amd registration</title>
 </head>
 <body>
-    <form class="reg-form">
-        <nav>
-            <img src="images/reg-logo.png">
-        </nav>
-        <input type="text" placeholder="Name" required/>
-        <input type="email" placeholder="Email" required/>
-        <input type="password" placeholder="Password" required/>
-        <input type="password" placeholder="Password" required/>
-        <a href="index.html">
-            <button type="button">Log in</button>
-        </a>
+  <div class="w3-container reg-form-container w3-card-4">
+    <form class="w3-container">
+      <img src="images/reg-logo.png" alt="Logo">
+
+      <label class="w3-text-grey">Name</label>
+      <input class="w3-input w3-border" type="text" placeholder="Name" required>
+
+      <label class="w3-text-grey">Email</label>
+      <input class="w3-input w3-border" type="email" placeholder="Email" required>
+
+      <label class="w3-text-grey">Password</label>
+      <input class="w3-input w3-border" type="password" placeholder="Password" required>
+
+      <label class="w3-text-grey">Confirm Password</label>
+      <input class="w3-input w3-border" type="password" placeholder="Password" required>
+      <button class="w3-button w3-block w3-blue w3-margin-top" type="submit">Register</button>
+    <a href="index.html" class="w3-button w3-block w3-light-grey w3-margin-top">Log in</a>
+  </div>
     </form>
+    
+
 </body>
 </html>
