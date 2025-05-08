@@ -24,6 +24,8 @@ header a{
 }
 .nav-right,.nav-left{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav {
     display: flex;
@@ -36,7 +38,6 @@ nav {
     font-weight: bold;
     cursor: pointer;
     padding: 5px 10px;
-    margin-top: 5px;
 }
 
 .nav-item:hover {
@@ -140,13 +141,31 @@ main {
     
 }
 .block2{
-    margin-top: 20%;
+    background-size:cover;
+    background-position: center;
+    background-image: url(images/AMD-Radeon-Software.jpg);
+    width: 60vw;
+    margin: 300px auto auto auto;          
+    height: 300px;             
 }
+.block2 h2{
+    margin-left: 1%;
+}
+.block2 .new-grid {
+    text-align:left;
+    margin-left: 160px;
+    font-size: large;
+    font-weight: bolder;
+    color:rgb(243, 240, 205);
+}
+
 .block3 h2{
-    margin-bottom: 20%;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-left: 40vh;
 }
 .block3{
-    margin-top: 20%;
+    margin-top: 10%;
 }
 .block4{
     background-size:cover;
@@ -229,6 +248,13 @@ h2{
     position: absolute;
     transform: translateX(-50%);
 }
+.grid-cont a{
+    text-decoration: none;
+    color: rgb(3, 152, 211);
+}
+.grid-cont h4{
+    margin-left:0;
+}
 .el1{
     background-size:cover;
     background-position: center;
@@ -253,10 +279,191 @@ h2{
 .el4,.el5,.el6{
     text-align: left;
 }
-.grid-cont a{
-    text-decoration: none;
-    color: rgb(3, 152, 211);
+.new-grid {
+    display: grid;
+    column-gap: 15px;
+    position: absolute;
+    transform: translateX(-50%);
+    column-gap: 15px;
+    grid-template-columns: 300px;
+    grid-template-rows: 150px;
+    margin-left: 20%;
 }
-.grid-cont h4{
-    margin-left:0;
+.product-grid{
+    justify-content: center;
+    display: grid;
+    column-gap: 120px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 150px;
+}
+.prod-el1{
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/b591488d-7bbf-44e5-afa1-c010f1782ac5.png);
+    background-repeat: no-repeat;
+}
+.prod-el2{
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/pc.png);
+    background-repeat: no-repeat;
+}
+.prod-el3{
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/amdgr.png);
+    background-repeat: no-repeat;
+}
+.block-case{
+    width: 60vw;
+    margin: 300px auto auto auto;          
+    height: 300px;             
+}
+.block-case h2{
+    margin-left: 1%;
+}
+.case-grid{
+    justify-content: center;
+    display: grid;
+    column-gap: 120px;
+    row-gap: 30px;
+    grid-template-columns: 500px 700px ;
+    grid-template-rows: 250px 250px;
+}
+.case-el1{
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    padding: auto;
+    text-align: center;       
+    font-size: large;
+    font-weight: bold;
+    background:linear-gradient(to right, #fc00bd, #090508, #000000);
+}
+.case-el2{
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    background:linear-gradient(to right, #000000, #090508, #ff0000);
+}
+.case-el3{
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    background:linear-gradient(to right, #006aff, #090508, #000000);
+}
+.case-el4{
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    background:linear-gradient(to right, #000000, #090508, #ddff00);
+}
+.case-grid .case-el1 .button{
+    margin-top: 200px;
+    position: absolute;
+}
+.case-grid .case-el2 .button{
+    margin-top: 200px;
+    position: absolute;
+}
+.case-grid .case-el3 .button{
+    margin-top: 200px;
+    position: absolute;
+}
+.case-grid .case-el4 .button{
+    margin-top: 200px;
+    position: absolute;
+}
+.block-ln{
+    margin-top: 20%;
+
+}
+.last-news-grid {
+    display: grid;
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 0px;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 150px 150px 150px 150px;
+}
+.lng1 {
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/lng1.png);
+    background-repeat: no-repeat;
+}
+.lng2 {
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/lng2.png);
+    background-repeat: no-repeat;
+}
+.lng3 {
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/lng3.png);
+    background-repeat: no-repeat;
+}
+.lng4 {
+    background-size:cover;
+    background-position: center;
+    background-image:url(images/lng4.png);
+    background-repeat: no-repeat;
+}
+.lng5 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    text-align: left;
+    font-size: large;
+    font-weight: bolder;
+    padding-bottom: 70px;
+    background:linear-gradient(to right, rgb(50, 50, 50), rgb(48, 47, 47), rgb(44, 44, 44));
+}
+.lng6 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    text-align: left;
+    font-size: large;
+    font-weight: bolder;
+    padding-bottom: 70px;
+    background:linear-gradient(to right, rgb(50, 50, 50), rgb(48, 47, 47), rgb(44, 44, 44));
+}
+.lng7 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    text-align: left;
+    font-size: large;
+    font-weight:bolder;
+    padding-bottom: 70px;
+    background:linear-gradient(to right, rgb(50, 50, 50), rgb(48, 47, 47), rgb(44, 44, 44));
+}
+.lng8 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+    text-align: left;
+    font-size: large;
+    font-weight: bolder;
+    padding-bottom: 70px;
+    background:linear-gradient(to right, rgb(50, 50, 50), rgb(48, 47, 47), rgb(44, 44, 44));
 }
