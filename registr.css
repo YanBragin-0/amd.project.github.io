@@ -77,7 +77,7 @@ nav {
   background-color: #000000;
   color:gray;
   padding: 30px 0;
-  height: 280px
+  height: auto;
 }
 
 .footer-container {
