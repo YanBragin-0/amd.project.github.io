@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Amd</title>
 </head>
 <body>
     <header>
-        <nav class="nav-left">
-            <img src="images/logo-header.png"alt="Logotype" width="50">
-            <div class="nav-item">Products</div>
-            <div class="nav-item">Solutions</div>
-            <div class="nav-item">Resources & Support</div>
-            <div class="nav-item">Shop</div>
-            </nav>  
-            <nav class="nav-right">
-                <a href="registr.html">
-                    <div class="nav-item">Account</div>
-                </a>
-                <div class="nav-item">Search</div>
-                <div class="nav-item">Cart</div>
-        </nav>
+    <div class="nav-container">
+    <div class="nav-left">
+      <img src="images\logo-header.png" alt="Logotype" width="50">
+      <div class="nav-item">Products</div>
+      <div class="nav-item">Solutions</div>
+      <div class="nav-item">Resources & Support</div>
+      <div class="nav-item">Shop</div>
+    </div>
+        <div class="nav-right">
+      <a href="registr.html"><div class="nav-item">Account</div></a>
+      <div class="nav-item">Search</div>
+      <div class="nav-item">Cart</div>
+    </div>
+        <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="nav-item">Products</div>
+    <div class="nav-item">Solutions</div>
+    <div class="nav-item">Resources & Support</div>
+    <div class="nav-item">Shop</div>
+    <div class="nav-item"><a href="registr.html">Account</a></div>
+    <div class="nav-item">Search</div>
+    <div class="nav-item">Cart</div>
+  </div>
     </header>
     <main>
         <div class="block1">
@@ -219,5 +232,11 @@
         <div>
             <button class="button button-fix">Subscribe to the<br> lastest news from AMD</button>
         </div>
+        <script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+  }
+</script>
+
 </body>
 </html>

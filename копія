@@ -1,3 +1,9 @@
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 body {
     font-family: 'Arimo', sans-serif;
     background:linear-gradient(to right, #000000, #140101, #000000);
@@ -7,43 +13,104 @@ body {
     justify-content: space-between;
     text-align: center;
     background-size:auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
-header {
-    background-color: #000000;
-    padding: 15px 0;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
+header{
+    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 1;
+    left: 0;
+    z-index: 1000;
 }
 header a{
     text-decoration: none;
 }
-.nav-right,.nav-left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-nav {
-    display: flex;
-    margin-left: 1%;
-    margin-right: 1%;
-    gap: 30px;
-}
+
 .nav-item {
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.nav-item a {
+  color: white;
+  text-decoration: none;
 }
 
-.nav-item:hover {
-    background-color: #2b2b29;
-    border-radius: 5px;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  position: relative;
+  flex-wrap: wrap;
 }
+
+.nav-left,
+.nav-right {
+    margin-right: 1%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-left img {
+  margin-right: 10px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+
+.nav-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: #111;
+  padding: 15px 20px;
+}
+
+.mobile-menu .nav-item {
+  padding: 5px 0;
+}
+
+
 main {
     padding: 50px 20px;
     display:block;
@@ -74,6 +141,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
 
  
 }
@@ -96,6 +164,7 @@ main {
     justify-content:center;
     gap: 30px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 .footer-info {
     width: 200px;
@@ -129,7 +198,7 @@ main {
 .block1{
     background-size:cover;
     background-position: center;
-    background-image: url(images/block1-bg.webp);
+    background-image: url(../images/block1-bg.webp);
     background-repeat: no-repeat;
     padding-top: 20%;
     background-size: cover;
@@ -138,15 +207,17 @@ main {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
     
 }
 .block2{
     background-size:cover;
     background-position: center;
-    background-image: url(images/AMD-Radeon-Software.jpg);
+    background-image: url(../images/AMD-Radeon-Software.jpg);
     width: 60vw;
     margin: 300px auto auto auto;          
-    height: 300px;             
+    height: 300px;           
+    flex-wrap: wrap;  
 }
 .block2 h2{
     margin-left: 1%;
@@ -157,12 +228,14 @@ main {
     font-size: large;
     font-weight: bolder;
     color:rgb(243, 240, 205);
+    flex-wrap: wrap;
 }
 
 .block3 h2{
     text-align: left;
     margin-bottom: 50px;
     margin-left: 40vh;
+    
 }
 .block3{
     margin-top: 10%;
@@ -170,7 +243,7 @@ main {
 .block4{
     background-size:cover;
     background-position: center;
-    background-image: url(images/block4-bg.avif);
+    background-image: url(../images/block4-bg.avif);
     background-repeat: no-repeat;
     padding-top: 20%;
     padding-bottom: 20%;
@@ -181,6 +254,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .block4 h1{
     text-align: center;
@@ -205,6 +279,7 @@ main {
     padding:10px 10px 10px 10px;
     align-items: flex-start;
     position: relative;
+    flex-wrap: wrap;
 }
 
 
@@ -237,6 +312,7 @@ h2{
     margin: 10px auto;
     gap: 20%;
     text-decoration: none;
+    flex-wrap: wrap;
 }
 .grid-cont{
     display: grid;
@@ -258,19 +334,19 @@ h2{
 .el1{
     background-size:cover;
     background-position: center;
-    background-image:url(images/images-grid1.jpg);
+    background-image:url(../images/images-grid1.jpg);
     background-repeat: no-repeat;
 }
 .el2{
     background-size:cover;
     background-position: center;
-    background-image:url(images/images-grid2.jpg);
+    background-image:url(../images/images-grid2.jpg);
     background-repeat: no-repeat;
 } 
 .el3 {
     background-size:cover;
     background-position: center;
-    background-image:url(images/images-grid3.jpg);
+    background-image:url(../images/images-grid3.jpg);
     background-repeat: no-repeat;
 }
 .grid-cont h3{
@@ -299,19 +375,19 @@ h2{
 .prod-el1{
     background-size:cover;
     background-position: center;
-    background-image:url(images/b591488d-7bbf-44e5-afa1-c010f1782ac5.png);
+    background-image:url(../images/b591488d-7bbf-44e5-afa1-c010f1782ac5.png);
     background-repeat: no-repeat;
 }
 .prod-el2{
     background-size:cover;
     background-position: center;
-    background-image:url(images/pc.png);
+    background-image:url(../images/pc.png);
     background-repeat: no-repeat;
 }
 .prod-el3{
     background-size:cover;
     background-position: center;
-    background-image:url(images/amdgr.png);
+    background-image:url(../images/amdgr.png);
     background-repeat: no-repeat;
 }
 .block-case{
@@ -323,6 +399,8 @@ h2{
     margin-left: 1%;
 }
 .case-grid{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     display: grid;
     column-gap: 120px;
@@ -402,25 +480,25 @@ h2{
 .lng1 {
     background-size:cover;
     background-position: center;
-    background-image:url(images/lng1.png);
+    background-image:url(../images/lng1.png);
     background-repeat: no-repeat;
 }
 .lng2 {
     background-size:cover;
     background-position: center;
-    background-image:url(images/lng2.png);
+    background-image:url(../images/lng2.png);
     background-repeat: no-repeat;
 }
 .lng3 {
     background-size:cover;
     background-position: center;
-    background-image:url(images/lng3.png);
+    background-image:url(../images/lng3.png);
     background-repeat: no-repeat;
 }
 .lng4 {
     background-size:cover;
     background-position: center;
-    background-image:url(images/lng4.png);
+    background-image:url(../images/lng4.png);
     background-repeat: no-repeat;
 }
 .lng5 {
