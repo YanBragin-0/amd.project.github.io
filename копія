@@ -6,7 +6,7 @@ html {
 }
 body {
     font-family: 'Arimo', sans-serif;
-    background:linear-gradient(to right, #000000, #140101, #000000);
+    background:linear-gradient(to right, #d81f1f, #140101, #000000);
     color: #ffffff;
     display: flex;
     flex-direction: column;

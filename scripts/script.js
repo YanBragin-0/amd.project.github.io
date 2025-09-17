@@ -11,4 +11,16 @@
     let _h1_style = getComputedStyle(_h1);
     console.log(`Кол-во <p>: ${_p_count}\n`, `Кол-во <h2>: ${_h2_count}\n`,`Цвет body: ${body_bgColor}\n`,`font-size h1: ${_h1_style.fontSize}`);
   }
+  function change_bgColor_element(){
+    let elements = document.querySelectorAll('*');
+    elements.forEach(el => {
+        const el_color = el.style.backgroundColor;
+        el.addEventListener(`mouseenter`,event => event.target.style.backgroundColor = 'red');
+        el.addEventListener(`mouseleave`,event => event.target.style.backgroundColor = el_color);
+    });
+}
 info_about_html();
+
+
+change_bgColor_element();
+
