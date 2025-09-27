@@ -1,7 +1,10 @@
+
+
+
   function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
   }
-  function info_about_html(){
+  /*function info_about_html(){
     let _p_count = document.querySelectorAll("p").length; 
     let _h2_count = document.querySelectorAll("h2").length;
     // можно зафаршмачится и писать через for(int i = 0;i < array_html.length - 2;++i) if(array_html[i] == < && array_html[i+1] == p && array_html[i+2] == >) 
@@ -20,7 +23,23 @@
     });
 }
 info_about_html();
-
-
 change_bgColor_element();
+*/
+let imagesUrl = ["images/A.png",
+                  "images/M.png",
+                  "images/D.png"
+                  ];
 
+
+let cont = document.getElementById("left");
+function showImgs(arr){
+  const fragment = document.createDocumentFragment();
+  arr.forEach(el=>{
+    let img = document.createElement("img");
+    img.style.marginLeft = "100px"
+    img.src = el;
+    fragment.appendChild(img);
+  })
+  cont.appendChild(fragment);
+}
+setTimeout(showImgs,5000,imagesUrl);
