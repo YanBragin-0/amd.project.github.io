@@ -32,6 +32,23 @@ let imagesUrl = ["images/A.png",
 
 
 let cont = document.getElementById("left");
+const fragment = document.createDocumentFragment();
+let i = 0;
+let timer = setInterval(()=>{
+  if(i == imagesUrl.length-1){
+    clearInterval(timer);
+  }
+  let img = document.createElement("img");
+  img.style.marginLeft = "100px";
+  img.src = imagesUrl[i];
+  fragment.appendChild(img);
+  cont.appendChild(fragment);
+  ++i;
+  
+},1000);
+
+
+/*
 function showImgs(arr){
   const fragment = document.createDocumentFragment();
   arr.forEach(el=>{
@@ -42,4 +59,4 @@ function showImgs(arr){
   })
   cont.appendChild(fragment);
 }
-setTimeout(showImgs,5000,imagesUrl);
+*/
