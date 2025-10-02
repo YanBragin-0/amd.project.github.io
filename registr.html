@@ -10,26 +10,40 @@
 </head>
 
 <body>
-  <header>
-    <nav class="nav-left">
-      <img src="images/logo-header.png" alt="Logotype" width="50">
+  header>
+    <div class="nav-container" id="navig">
+    <div class="nav-left" id="left">
+      <img src="images\logo-header.png" alt="Logotype" width="50">
       <div class="nav-item">Products</div>
       <div class="nav-item">Solutions</div>
       <div class="nav-item">Resources & Support</div>
       <div class="nav-item">Shop</div>
-    </nav>
-    <nav class="nav-right">
-      <a href="registr.html">
-        <div class="nav-item">Account</div>
-      </a>
+    </div>
+        <div class="nav-right">
+      <a href="registr.html"><div class="nav-item">Account</div></a>
       <div class="nav-item">Search</div>
       <div class="nav-item">Cart</div>
-    </nav>
-  </header>
+    </div>
+        <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="nav-item">Products</div>
+    <div class="nav-item">Solutions</div>
+    <div class="nav-item">Resources & Support</div>
+    <div class="nav-item">Shop</div>
+    <div class="nav-item"><a href="registr.html">Account</a></div>
+    <div class="nav-item">Search</div>
+    <div class="nav-item">Cart</div>
+  </div>
+    </header>
 
-  <div class="container mt-5 mb-5">
-    <div class="card p-4 shadow">
-      <form>
+  <div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card p-4 shadow"  style="max-width: 600px; width: 100%;">
+      <form novalidate>
         <div class="text-center mb-4">
           <img src="images/reg-logo.png" alt="Logo" style="max-width: 150px;">
         </div>
@@ -41,7 +55,7 @@
 
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" class="form-control" placeholder="Email" required>
+          <input type="text" id="email" class="form-control" placeholder="Email" required>
         </div>
 
         <div class="mb-3">
@@ -114,6 +128,6 @@
   <div class="text-center mt-3">
     <button class="btn btn-outline-dark">Subscribe to the<br> latest news from AMD</button>
   </div>
-
+<script src="scripts/script.js"></script>
 </body>
 </html>
