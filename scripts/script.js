@@ -77,8 +77,7 @@ _form.addEventListener("submit",(f)=>{
     isValid = false;
   }
   if(_strName.value.search(_name) === -1){
-    _strName.setCustomValidity("Введіть коректний Name");
-    isValid = false;
+    _strName.value = _strName.value.replace(/[^A-Za-z0-9]/g,"");
   }
   if(!isValid){
     f.preventDefault();
